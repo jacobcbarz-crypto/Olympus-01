@@ -1,0 +1,109 @@
+{
+  "prometheus": {
+    "name": "Prometheus Monitoring System",
+    "version": "1.0.0",
+    "description": "Autonomous AI monitoring and architect system",
+    "encryption_password": "prometheus_secure_2024_change_me",
+    "auto_start": true,
+    "autonomous_mode": true
+  },
+  "security": {
+    "scan_interval": 300,
+    "threat_detection_enabled": true,
+    "file_integrity_monitoring": true,
+    "monitored_paths": [
+      "/workspace/prometheus_core.py",
+      "/workspace/hephaestus.py",
+      "/workspace/prometheus_web.py",
+      "/workspace/prometheus_cli.py",
+      "/workspace/prometheus_launcher.py"
+    ],
+    "alert_thresholds": {
+      "cpu_usage": 90,
+      "memory_usage": 90,
+      "disk_usage": 95,
+      "open_ports": 50
+    }
+  },
+  "monitoring": {
+    "heartbeat_interval": 60,
+    "log_retention_days": 30,
+    "max_log_size_mb": 100,
+    "performance_tracking": true,
+    "system_metrics_interval": 30
+  },
+  "hephaestus": {
+    "auto_generate_examples": true,
+    "example_generation_interval": 300,
+    "prompt_template_version": "1.0",
+    "max_requirements_per_prompt": 10,
+    "supported_project_types": [
+      "web_app",
+      "mobile_app",
+      "ai_system",
+      "automation_system",
+      "api_service",
+      "desktop_app"
+    ]
+  },
+  "web_interface": {
+    "enabled": true,
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": false,
+    "auto_refresh_interval": 30000,
+    "max_log_lines_display": 100
+  },
+  "database": {
+    "path": "/workspace/prometheus_data/prometheus.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24,
+    "cleanup_old_records_days": 90
+  },
+  "modules": {
+    "auto_discovery": true,
+    "module_health_check_interval": 60,
+    "failed_module_restart_attempts": 3,
+    "module_timeout_seconds": 30
+  },
+  "alerts": {
+    "email_enabled": false,
+    "email_smtp_server": "",
+    "email_smtp_port": 587,
+    "email_username": "",
+    "email_password": "",
+    "email_recipients": [],
+    "webhook_enabled": false,
+    "webhook_url": "",
+    "console_alerts": true,
+    "log_alerts": true
+  },
+  "android": {
+    "apk_generation_enabled": false,
+    "package_name": "com.prometheus.monitoring",
+    "app_name": "Prometheus Monitor",
+    "version_code": 1,
+    "min_sdk_version": 21,
+    "target_sdk_version": 33,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WAKE_LOCK"
+    ]
+  },
+  "backup": {
+    "enabled": true,
+    "backup_directory": "/workspace/prometheus_backups",
+    "backup_interval_hours": 6,
+    "max_backups_to_keep": 10,
+    "compress_backups": true
+  },
+  "development": {
+    "debug_mode": false,
+    "verbose_logging": false,
+    "test_mode": false,
+    "mock_external_services": false
+  }
+}

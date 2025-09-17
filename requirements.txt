@@ -1,0 +1,44 @@
+# Prometheus - Monitoring and Architect AI System
+# Core dependencies for autonomous operation
+
+# Core Python packages
+flask==2.3.3
+flask-socketio==5.3.6
+cryptography==41.0.4
+watchdog==3.0.0
+psutil==5.9.6
+requests==2.31.0
+
+# Database
+sqlite3  # Built into Python
+
+# Development and testing
+pytest==7.4.2
+pytest-cov==4.1.0
+
+# Optional: For enhanced features
+# pandas==2.1.1  # For advanced data processing
+# numpy==1.25.2  # For numerical computations
+# scikit-learn==1.3.0  # For ML-based threat detection
+
+# Web interface dependencies (already included above)
+# - flask
+# - flask-socketio
+
+# CLI dependencies (built-in modules used)
+# - argparse (built-in)
+# - json (built-in)
+# - pathlib (built-in)
+# - datetime (built-in)
+
+# Security and monitoring
+# - cryptography (already included)
+# - watchdog (already included)
+# - psutil (already included)
+
+# Optional Android APK building (if needed later)
+# buildozer==1.5.0  # For Android APK generation
+# kivy==2.2.1  # For mobile UI (if needed)
+
+# Note: This is a minimal requirements file.
+# Additional packages may be added as modules are developed by Hephaestus.
