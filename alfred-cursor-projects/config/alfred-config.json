@@ -6,7 +6,11 @@
     "defaultTemplate": "react-typescript",
     "autoInstallDependencies": true,
     "autoInitGit": true,
-    "autoOpenInCursor": true
+    "autoOpenInCursor": true,
+    "githubIntegration": {
+      "autoCreateRepo": false,
+      "defaultBranch": "main"
+    }
   },
   "templates": {
     "react-typescript": {
@@ -21,13 +25,57 @@
         "src/main.tsx"
       ],
       "placeholders": [
-        {{projectName}}"
-      ]
+        "{{projectName}}"
+      ],
+      "devCommand": "npm run dev",
+      "buildCommand": "npm run build"
+    },
+    "nextjs-typescript": {
+      "name": "Next.js + TypeScript",
+      "description": "Full-stack Next.js application with TypeScript",
+      "files": [
+        "package.json",
+        "next.config.js",
+        "tsconfig.json",
+        "app/page.tsx",
+        "app/layout.tsx"
+      ],
+      "placeholders": [
+        "{{projectName}}"
+      ],
+      "devCommand": "npm run dev",
+      "buildCommand": "npm run build"
+    },
+    "python-fastapi": {
+      "name": "Python + FastAPI",
+      "description": "Modern Python API with FastAPI framework",
+      "files": [
+        "requirements.txt",
+        "main.py",
+        "app/__init__.py",
+        "app/routers/__init__.py"
+      ],
+      "placeholders": [
+        "{{projectName}}"
+      ],
+      "devCommand": "uvicorn main:app --reload",
+      "buildCommand": "pip install -r requirements.txt"
     }
   },
   "commands": {
     "createProject": "./scripts/create-project.sh",
     "listTemplates": "ls -1 ./templates/",
-    "listProjects": "ls -1 ./projects/"
+    "listProjects": "ls -1 ./projects/",
+    "cleanProjects": "rm -rf ./projects/*"
+  },
+  "automation": {
+    "enabled": true,
+    "scheduledTasks": [],
+    "hooks": {
+      "preCreate": [],
+      "postCreate": [
+        "echo 'Project created successfully!'"
+      ]
+    }
   }
 }
