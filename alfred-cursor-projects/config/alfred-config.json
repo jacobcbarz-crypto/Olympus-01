@@ -1,0 +1,33 @@
+{
+  "alfredConfig": {
+    "projectBasePath": "./projects",
+    "templatesPath": "./templates",
+    "scriptsPath": "./scripts",
+    "defaultTemplate": "react-typescript",
+    "autoInstallDependencies": true,
+    "autoInitGit": true,
+    "autoOpenInCursor": true
+  },
+  "templates": {
+    "react-typescript": {
+      "name": "React + TypeScript + Vite",
+      "description": "Modern React application with TypeScript and Vite",
+      "files": [
+        "package.json",
+        "vite.config.ts",
+        "tsconfig.json",
+        "index.html",
+        "src/App.tsx",
+        "src/main.tsx"
+      ],
+      "placeholders": [
+        {{projectName}}"
+      ]
+    }
+  },
+  "commands": {
+    "createProject": "./scripts/create-project.sh",
+    "listTemplates": "ls -1 ./templates/",
+    "listProjects": "ls -1 ./projects/"
+  }
+}
